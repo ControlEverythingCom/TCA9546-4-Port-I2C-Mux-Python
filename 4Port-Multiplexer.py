@@ -2,7 +2,7 @@ import smbus
 import time
 import sys
 
-address = 113
+address = 112
 
 
 bus = smbus.SMBus(1)
@@ -18,7 +18,7 @@ while(i < 9):
     for x in range(1,127):
         try:
             status = bus.write_quick(x)
-            if(x != 113):
+            if(x != 112):
                print 'device present at %i' % x
                present = True
         except IOError, err:
